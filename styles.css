@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(1, 0, 31);
+}
+
+header {
+    width: 100%;
+    height: auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-profile {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.image-profile img {
+    width: 180px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 200px;
+}
+
+.name {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;    
+    
+}
+
+.name h1 {
+    text-align: center;
+    object-fit: cover;
+    color: rgb(251, 255, 0);
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+main section h2 {
+    color: rgb(71, 3, 134);
+    text-shadow: 1px 1px  rgb(255, 255, 255);
+}
+
+main section ul {
+    list-style: none;
+}
+
+main section ul li {
+    margin: 10px;
+}
+
+.skills, .formacion, .experiencia {
+    width: auto;
+    height: auto;
+    margin: 10px; 
+    background-color: rgb(46, 86, 216);
+    box-shadow: 0px 0px 5px 5px  rgb(9, 2, 110);
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.skills, .formacion, .experiencia ul li {
+    text-align: center;
+    object-fit: cover;    
+}
+
+main li:hover {
+    text-decoration-line: underline;
+    text-decoration-color: rgb(251, 255, 0);
+}
+
+main section h2:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255);
+    font-size: xx-large;
+}
+
+
+/*footer*/
+
+footer {
+    width: 100%;
+    height: auto;
+    color: rgb(251, 255, 0);
+}
+
+footer section ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+footer section ul li {
+    display: flex;
+    object-fit: cover;
+}
+
+footer section ul li img {
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+/*Responsive*/
+
+@media only screen and (min-width: 600px) {
+    header {
+        flex-direction:row;
+        align-items: center;
+    }
+
+    .image-profile {
+        justify-content: flex-end;
+    }
+
+    .name {
+        justify-content: flex-start;
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+        margin: 50px 0px;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .skills, .formacion, .experiencia {
+        width: 32%;
+    }
+
+    
+}
+
