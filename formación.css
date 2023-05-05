@@ -40,8 +40,21 @@ nav ul {
 }
 
 nav ul li a {
+    width: auto;
+    height: 40px;
     text-decoration: none;
-    color: rgb(163, 154, 28);
+    color: rgb(255, 251, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    background-color: rgb(255, 251, 0);
+    color: rgb(0, 0, 0);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 15px;
 }
 
 /*main*/
@@ -64,11 +77,13 @@ main {
     height: 100%;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 
 .formación h2{
     width: 100%;
     height: 50%;
+    margin-left: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -77,25 +92,29 @@ main {
     border-width: 20px;
     border-color: rgb(163, 154, 28);
     border-radius: 100px 100px 100px 100px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: rgb(163, 154, 28);
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .lista {
     width: 60%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
     color: rgb(0, 0, 0);
 }
 
 .lista ul {
     width: 100%;
-    height: 100%;
+    height: 50%;
     text-decoration: underline;
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .lista ul li {
@@ -103,24 +122,28 @@ main {
     height: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .lista ul li h3 {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    font-size: x-large;
+    font-size: xx-large;
+    text-align: center;
 }
 
 .lista ul li div p {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: large;
+    font-size: x-large;
+    text-align: center;
 }
 
 /*footer*/
@@ -134,23 +157,110 @@ footer {
     color: rgb(163, 154, 28);
 }
 
-.contacto ul {
+.datos ul {
     list-style: none;
     text-decoration: none;
     display: flex;
     align-items: center;
 }
 
-.contacto ul li {
-    display: flex;
-    justify-content: center;
+.datos ul li {
     width: 50%;
     height: auto;
+    display: flex;
 }
 
-.contacto ul li img {
+.datos ul li img {
     width: 20px;
     height: 20px;
     margin: 0px 5px;
     border-radius: 50px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 817px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    .name {
+        width: 100%;
+        height: auto;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .formación {
+        width: 90%;
+        height: 50%;
+        border-width: 10px;
+        margin-bottom: 10px;
+    }
+
+    .lista {
+        width: 100%;
+        height: 100%;
+    }
+
+    .lista ul {
+        width: 100%;
+        height: 100%;
+    }
+
+    .lista ul li {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .name {
+        width: 100%;
+        height: auto;
+        font-size:x-small;
+    }
+    
+    nav {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size:x-small;
+    }
+
+    .datos {
+        width: 100%;
+        height: 70%;
+    }
+
+    .datos ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .formación h2 {
+        font-size: x-large;
+    }
+
+    .lista ul li div p {
+        width: 100%;
+        height: 100%;
+        font-size: large;
+        text-align: center;
+    }
 }
